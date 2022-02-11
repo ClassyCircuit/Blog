@@ -1,3 +1,46 @@
-﻿body {
+﻿@use 'colors';
+@use 'base';
+@use 'sass:math';
+
+
+%column-size{
+    width: math.div(200, 50)px;
+    padding: 0;
+    margin: auto;
+}
+
+.if table {
+    thead {
+        td {
+            @extend %column-size;
+            background-color: burlywood;
+
+        } 
+    }
+}
+
+body {
+    %headings {
+        font-size: xx-large;
+        color: darkmagenta;
+    }
+
+    background-color: whitesmoke;
+}
+
+a {
+    .nav-link {
+        @include base.box(50px);
+        color: var(--color-test); 
+    }
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    @extend %headings !optional;
+}
+
+.alert {
+    @extend %column-size;
 
 }

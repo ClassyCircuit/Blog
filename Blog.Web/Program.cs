@@ -20,6 +20,7 @@ namespace Blog.Web
 			Host.CreateDefaultBuilder(args)
 				.ConfigureWebHostDefaults(webBuilder =>
 				{
+					webBuilder.UseKestrel();
 					webBuilder.UseStartup<Startup>();
 				});
 	}

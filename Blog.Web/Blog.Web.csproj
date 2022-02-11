@@ -5,11 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="compilerconfig.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="compilerconfig.json" />
+    <PackageReference Include="LigerShark.WebOptimizer.Sass" Version="3.0.82-beta" />
   </ItemGroup>
 
 </Project>
