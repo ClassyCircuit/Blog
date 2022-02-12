@@ -19,9 +19,9 @@ body {
     height: calc(100vh - 1px);
     grid-gap: 0px;
     grid-template-areas:
-        "buffer-left logo top buffer-right"
-        "buffer-left side main buffer-right"
-        "buffer-left side foot buffer-right";
+        ". logo top ."
+        ". side main ."
+        ". side foot .";
 }
 
 .brand {
