@@ -2,5 +2,9 @@
   {
     "outputFile": "wwwroot/css/layout.css",
     "inputFile": "wwwroot/css/layout.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/stacked/stackedlayout.css",
+    "inputFile": "wwwroot/css/stacked/stackedlayout.scss"
   }
 ]

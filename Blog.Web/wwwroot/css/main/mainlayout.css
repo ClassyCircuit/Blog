@@ -57,9 +57,6 @@ html, body {
   scrollbar-width: none;
   -ms-overflow-style: none;
   padding: 4rem;
-  /*    display: flex;
-      align-items: center;
-      justify-content: center;*/
 }
 
 .content::-webkit-scrollbar {
@@ -94,8 +91,13 @@ ul.navmenu {
 .sidebar > .navmenu > .navitem {
   height: 5rem;
   font-size: large;
+  min-width: 100%;
 }
 
 .sidebar .navitem {
   color: var(--sidebar-text-color);
+}
+
+.content > h1 {
+  margin-top: 0;
 }

@@ -1,0 +1,84 @@
+﻿html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+.grid > div {
+/*    border: 1px solid purple;*/
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "f f f b b"
+        "a d d . e"
+        "a d d . e"
+        "a g g g g";
+    height: calc(100vh - 1.25rem);
+    width: calc(100vw - 1.25rem);
+    grid-gap: 1rem;
+    padding: 0.625rem;
+    
+}
+
+.grid-item {
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.a {
+    grid-area: a;
+    background-color: #227DB6;
+}
+.b {
+    grid-area: b;
+    background-color: #80E5F7;
+}
+.c {
+    grid-area: b-start / b-start / 1 / 4;
+    background-color: #EB505E;
+    transform: rotate(45deg);
+    width: 50%;
+    height: 50%;
+    place-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.d {
+    grid-area: d;
+    background-color: #EB505E;
+}
+.e {
+    grid-area: e;
+    background-color: #EB505E;
+}
+.f {
+    grid-area: f;
+    background-color: #80E5F7;
+}
+.g {
+    grid-area: g;
+    background-color: #FFE100;
+}
+.h {
+    grid-area: d;
+    background-color: white;
+    opacity: 50%;
+    width: 50%;
+    height: 50%;
+    place-self: center;
+    transform: rotate(-45deg);
+    z-index: 2;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
