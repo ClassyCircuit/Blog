@@ -1,9 +1,5 @@
 ﻿@mixin box($width, $height: $width) {
     width: $width;
     height: $height;
-    background-color: blue;
-}
-
-@mixin black(){
-    background-color: black;
+    background-color: red;
 }

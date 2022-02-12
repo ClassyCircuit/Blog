@@ -1,0 +1,65 @@
+﻿.page > div {
+  /*border: 2px solid #d8ffff;*/
+}
+
+html, body {
+  font-family: "Poppins", sans-serif;
+  margin: unset;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 2fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  grid-gap: 0;
+  grid-template-areas: ". logo top ." ". side main ." ". side foot .";
+}
+
+.brand {
+  grid-area: logo;
+}
+
+.sidebar {
+  grid-area: side;
+}
+
+.topbar {
+  grid-area: top;
+}
+
+.content {
+  grid-area: main;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.content::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.footer {
+  grid-area: foot;
+}
+
+.topbar > .navmenu {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+
+.topbar ul.navmenu {
+  padding: unset;
+}
+
+.sidebar > .navmenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar > .navmenu > .navitem {
+  height: 80px;
+}
