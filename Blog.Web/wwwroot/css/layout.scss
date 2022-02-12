@@ -1,5 +1,4 @@
-﻿@use 'mixins' as m;
-@use 'base' as *;
+﻿@use 'colors';
 
 
 .page > div{
@@ -13,26 +12,42 @@ html, body {
 
 .page {
     display: grid;
-    grid-template-columns: 0.5fr 0.5fr 2fr 1fr;
+    grid-template-columns: 15.625rem 71.25rem 1fr;
     grid-template-rows: auto 1fr auto;
     height: 100vh;
     grid-gap: 0;
     grid-template-areas:
-        ". logo top ."
-        ". side main ."
-        ". side foot .";
+        "logo top et"
+        "side main ."
+        "side foot .";
 }
 
 .brand {
     grid-area: logo;
+    background-color: var(--sidebar-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--brand-color);
+}
+
+.empty-sidebar {
+    grid-area: es;
 }
 
 .sidebar {
     grid-area: side;
+    background-color: var(--sidebar-color);
 }
 
 .topbar {
     grid-area: top;
+    background-color: var(--topbar-color);
+}
+
+.empty-topbar {
+    grid-area: et;
+    background-color: var(--topbar-color);
 }
 
 .content {
@@ -40,6 +55,11 @@ html, body {
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    padding: 4rem;
+
+/*    display: flex;
+    align-items: center;
+    justify-content: center;*/
 }
 
 .content::-webkit-scrollbar {
@@ -51,13 +71,16 @@ html, body {
     grid-area: foot;
 }
 
+.navmenu {
+    list-style-type: none;
+}
+
 .topbar > .navmenu {
     display: flex;
-    list-style-type: none;
     justify-content: space-around;
 }
 
-.topbar ul.navmenu {
+ul.navmenu {
     padding: unset;
 }
 
@@ -65,9 +88,16 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
-.sidebar > .navmenu > .navitem{
-    height: 80px;
+.sidebar > .navmenu > .navitem {
+    height: 5rem;
+    font-size: large;
 }
 
+.sidebar {
+    .navitem {
+        color: var(--sidebar-text-color);
+    }
+}
