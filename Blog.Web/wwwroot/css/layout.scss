@@ -1,0 +1,39 @@
+﻿@use 'base';
+
+.page {
+    display: grid;
+    height: calc(100vh);
+    width: calc(100vw);
+    margin: 0;
+    row-gap: 1rem;
+    grid-template-columns: 
+            minmax(1.2rem, 1fr)
+            minmax(auto, 57ch)
+            minmax(1.2rem, 1fr);
+}
+
+.page-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.navbar {
+    grid-area: 1 / 1 / 1 / -1;
+}
+
+.logo {
+    grid-area: 2 / 1 / 2 / -1;
+}
+
+.main {
+    grid-column: 2;
+/*    grid-area: 3 / 2 / 3 / 3;*/
+}
+
+.footer {
+    grid-area: 5 / 1 / 5 / -1;
+}

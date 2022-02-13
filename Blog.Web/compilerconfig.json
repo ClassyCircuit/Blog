@@ -6,5 +6,9 @@
   {
     "outputFile": "wwwroot/css/stacked/stackedlayout.css",
     "inputFile": "wwwroot/css/stacked/stackedlayout.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/layout/layout.css",
+    "inputFile": "wwwroot/css/layout/layout.scss"
   }
 ]
