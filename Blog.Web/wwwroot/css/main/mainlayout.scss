@@ -1,4 +1,6 @@
-﻿@use 'colors';
+﻿@use 'partials/colors';
+@use 'partials/mixins';
+@use 'partials/base';
 
 
 .page > div{
