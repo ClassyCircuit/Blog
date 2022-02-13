@@ -2,6 +2,11 @@
     height: 100%;
 }
 
+html, body {
+    font-family: 'orange juice', sans-serif;
+    margin: unset;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -10,6 +15,10 @@ body {
 
 .grid > div {
 /*    border: 1px solid purple;*/
+}
+
+h1 {
+    font-size: 5rem;
 }
 
 .grid {
@@ -31,6 +40,9 @@ body {
 .grid-item {
     border-radius: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .a {
