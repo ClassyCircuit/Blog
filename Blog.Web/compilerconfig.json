@@ -26,5 +26,13 @@
   {
     "outputFile": "wwwroot/css/cards.css",
     "inputFile": "wwwroot/css/cards.scss"
+  },
+  {
+    "outputFile": "Components/ArticleLayout.razor.css",
+    "inputFile": "Components/ArticleLayout.razor.scss"
+  },
+  {
+    "outputFile": "Components/CardLayout.razor.css",
+    "inputFile": "Components/CardLayout.razor.scss"
   }
 ]

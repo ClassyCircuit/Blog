@@ -8,8 +8,9 @@
     width: calc(100vw);
     max-width: 100%;
     margin: 0;
-    grid-template-columns: minmax(1.2rem, 1fr) minmax(auto, 57ch) minmax(1.2rem, 1fr);
-    grid-template-rows: 4.125rem 6rem 1fr 4.125rem;
+    grid-template-columns: auto;
+/*    grid-template-columns: minmax(1.2rem, 1fr) auto minmax(1.2rem, 1fr);*/
+    grid-template-rows: 4.125rem 8rem 1fr 4.125rem;
 }
 
 .page-item {
@@ -30,11 +31,11 @@
 .logo-container {
     grid-column: 1 / -1;
     grid-row: 2 / 2;
-    background-color: #ffd70017;
+    background-color: var(--color-royal-purple);
 }
 
 .content-container {
-    grid-column: 2 / 3;
+    grid-column: 1 / -1;
     grid-row: 3 / 3;
 }
 
