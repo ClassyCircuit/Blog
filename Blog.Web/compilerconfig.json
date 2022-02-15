@@ -10,5 +10,21 @@
   {
     "outputFile": "wwwroot/css/layout/layout.css",
     "inputFile": "wwwroot/css/layout/layout.scss"
+  },
+  {
+    "outputFile": "Shared/NavBar.css",
+    "inputFile": "Shared/NavBar.scss"
+  },
+  {
+    "outputFile": "Shared/NavBar.razor.css",
+    "inputFile": "Shared/NavBar.razor.scss"
+  },
+  {
+    "outputFile": "Pages/Index.razor.css",
+    "inputFile": "Pages/Index.razor.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/cards.css",
+    "inputFile": "wwwroot/css/cards.scss"
   }
 ]

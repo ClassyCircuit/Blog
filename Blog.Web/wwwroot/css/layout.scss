@@ -1,5 +1,6 @@
 ﻿@use 'base';
 @use 'mixins' as *;
+@use 'colors';
 
 .page {
     display: grid;
@@ -8,7 +9,7 @@
     max-width: 100%;
     margin: 0;
     grid-template-columns: minmax(1.2rem, 1fr) minmax(auto, 57ch) minmax(1.2rem, 1fr);
-    grid-template-rows: 4.125rem 4rem 1fr 4.125rem;
+    grid-template-rows: 4.125rem 6rem 1fr 4.125rem;
 }
 
 .page-item {
@@ -19,28 +20,33 @@
     /*@include shadow;*/
 }
 
-.navbar {
+.navbar-container {
     grid-column: 1 / -1;
     grid-row: 1 / 1;
+    background-color: var(--color-royal-purple);
+    color: white;
 }
 
-.logo {
+.logo-container {
     grid-column: 1 / -1;
     grid-row: 2 / 2;
+    background-color: #ffd70017;
 }
 
-.main {
+.content-container {
     grid-column: 2 / 3;
     grid-row: 3 / 3;
 }
 
-.footer {
+.footer-container {
     grid-column: 1 / -1;
     grid-row: 4 / 4;
+    background-color: var(--color-royal-purple);
+    color: white;
 }
 
-.logo > img {
+.logo-container > img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }

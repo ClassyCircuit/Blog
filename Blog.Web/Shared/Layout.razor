@@ -1,10 +1,12 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="page">
-    <div class="page-item navbar">NAVBAR</div>
-    <div class="page-item logo">
-        <img src="/img/lines.svg"/>
+    <div class="page-item navbar-container">
+        <NavBar />
     </div>
-    <div class="page-item main">@Body</div>
-    <div class="page-item footer">FOOTER</div>
+    <div class="page-item logo-container">
+        <img src="https://placebear.com/740/160"/>
+    </div>
+    <div class="page-item content-container">@Body</div>
+    <div class="page-item footer-container">FOOTER</div>
 </div>
