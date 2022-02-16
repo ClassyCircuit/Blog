@@ -1,17 +1,11 @@
-﻿.navbar > ul {
-  list-style: none;
+﻿.navbar {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   padding: unset;
   margin: 0;
   column-gap: 1rem;
   align-items: center;
   justify-content: center;
-}
-
-.navbar > ul > li {
-  padding: unset;
-  margin: 0;
 }
 
 .nav-item ::deep a {
