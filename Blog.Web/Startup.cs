@@ -34,6 +34,7 @@ namespace Blog.Web
 				//pipeline.AddScssBundle("/bundle.css", "/css/style.scss", "/css/layout.scss", "/css/_colors.scss", "/css/_base.scss");
 				pipeline.CompileScssFiles();
 			});
+
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

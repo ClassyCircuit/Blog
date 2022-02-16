@@ -29,6 +29,7 @@ p, span.bullet {
   line-height: 1.7rem;
 }
 
+/* underline animation */
 :root {
   --color-royal-purple: #4B0145;
 }
@@ -70,6 +71,7 @@ p, span.bullet {
 .content-container {
   grid-column: 1/-1;
   grid-row: 3/3;
+  margin-bottom: 1rem;
 }
 
 .footer-container {

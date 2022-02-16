@@ -38,5 +38,21 @@
   {
     "outputFile": "wwwroot/css/animations.css",
     "inputFile": "wwwroot/css/animations.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/navbar.css",
+    "inputFile": "wwwroot/css/navbar.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/article-layout.css",
+    "inputFile": "wwwroot/css/article-layout.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/card-layout.css",
+    "inputFile": "wwwroot/css/card-layout.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/style.css",
+    "inputFile": "wwwroot/css/style.scss"
   }
 ]

@@ -8,11 +8,11 @@
   justify-content: center;
 }
 
-.nav-item ::deep a {
+.nav-item a {
   color: white;
   text-decoration: none;
 }
 
-.nav-item ::deep a.active {
+.nav-item a.active {
   text-decoration: none;
 }

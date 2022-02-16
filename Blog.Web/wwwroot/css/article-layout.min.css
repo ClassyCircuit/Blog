@@ -1,0 +1,1 @@
+﻿.article-grid{display:grid;grid-template-columns:minmax(1.2rem,1fr) minmax(0,57ch) minmax(1.2rem,1fr);align-items:flex-start;min-height:100vh;}
