@@ -2,71 +2,39 @@
 
 <ArticleLayout>
     <h3>Article id: @Id</h3>
-@*    <form>
-        <label class="col-xl-3 col-lg-3 col-form-label text-sm-left text-lg-right">Description</label>
-        <div class="col-lg-9 col-xl-6">
-            <InputRichText @bind-Value="Model.Text" class="form-control form-control-solid form-control-lg"></InputRichText>
-            <ValidationMessage For="@(() => Model.Text)" />
-        </div>
-    </form>*@
+
+<RichTextEdit @ref="richTextEditRef"
+              Theme="RichTextEditTheme.Snow"
+              ContentChanged="@OnContentChanged"
+              PlaceHolder="Type your post here..."
+              ReadOnly="@readOnly"
+              SubmitOnEnter="false"
+              EnterPressed="@OnSave"
+              ToolbarPosition="Placement.Bottom"
+              
+>
+    <Editor>My example content</Editor>
+    <Toolbar>
+        <RichTextEditToolbarGroup>
+            <RichTextEditToolbarButton Action="RichTextEditAction.Bold" />
+            <RichTextEditToolbarButton Action="RichTextEditAction.Italic" />
+            <RichTextEditToolbarSelect Action="RichTextEditAction.Size">
+                <RichTextEditToolbarSelectItem Value="small" />
+                <RichTextEditToolbarSelectItem Selected="true" />
+                <RichTextEditToolbarSelectItem Value="large" />
+                <RichTextEditToolbarSelectItem Value="huge">Very Big</RichTextEditToolbarSelectItem>
+            </RichTextEditToolbarSelect>
+            <RichTextEditToolbarButton Action="RichTextEditAction.List" Value="ordered" />
+            <RichTextEditToolbarButton Action="RichTextEditAction.List" Value="bullet" />
+        </RichTextEditToolbarGroup>
+        <!-- Custom toolbar content -->
+        <RichTextEditToolbarGroup Float="Float.End">
+            <Button onClick="window.open('https://www.quilljs.com/','quilljs')"><Icon Name="IconName.InfoCircle" /></Button>
+            <Button Clicked="@OnSave"><Icon Name="IconName.Save" /></Button>
+        </RichTextEditToolbarGroup>
+    </Toolbar>
+</RichTextEdit>
 
 
-<SurveyPrompt Title="How is Blazor working for you?" />
-<SurveyPrompt Title="How is Blazor working for you?" />
-
-<p>
-    Welcome to your new app.Welcome to your new app.e to your new app.Wele to your new app.Wele to your new app.Wele to your new app.Wele to your new app.Wele to your new app.Wele to your new app.Wele to your new app.Wele to your new app.Wele to your new app.Wele to your new app.Wele to your new app.Wele to your new app.Wele to your new app.Wele to your new app.Wele to your new app.Wele to your new app.Wele to your new app.Wele to your new app.Wele to your new app.Wele to your new app.Wele to your new app.Wele to your new app.Wele to your new app.Wele to your new app.Wel
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-</p>
-<p>
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app. to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app. to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app.
-    Welcome to your new app. to your new app.
-    Welcome to your new app.
-</p>
-
-<FetchData/>
-<FetchData/>
 </ArticleLayout>
 

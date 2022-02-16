@@ -24,16 +24,16 @@
 
 .navbar-container {
     grid-column: 1 / -1;
-    grid-row: 1 / 1;
+    grid-row: 2 / 2;
     background-color: var(--color-royal-purple);
     color: white;
 }
 
 .logo-container {
     grid-column: 1 / -1;
-    grid-row: 2 / 2;
+    grid-row: 1 / 1;
     background-color: var(--color-royal-purple);
-    max-height: 8rem;
+    max-height: 12rem;
 }
 
 .content-container {

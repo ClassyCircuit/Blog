@@ -18,7 +18,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Blazorise.Bootstrap5" Version="0.9.5.5" />
+    <PackageReference Include="Blazorise.Icons.FontAwesome" Version="0.9.5.5" />
+    <PackageReference Include="Blazorise.RichTextEdit" Version="0.9.5.5" />
     <PackageReference Include="LigerShark.WebOptimizer.Sass" Version="3.0.82-beta" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\js\" />
   </ItemGroup>
 
 </Project>

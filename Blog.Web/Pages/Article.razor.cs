@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using Blazorise.RichTextEdit;
+using Microsoft.AspNetCore.Components;
+using System.Threading.Tasks;
 
 namespace Blog.Web.Pages
 {
@@ -7,22 +9,28 @@ namespace Blog.Web.Pages
 		[Parameter]
 		public string Id { get; set; }
 
-		public TextModel Model { get; set; }
 
-		protected void HandleValidSubmit()
-		{
+        protected RichTextEdit richTextEditRef;
+        protected bool readOnly;
+        protected string contentAsHtml;
+        protected string contentAsDeltaJson;
+        protected string contentAsText;
+        protected string savedContent;
 
-			// Process the valid form
-		}
+        public async Task OnContentChanged()
+        {
+            contentAsHtml = await richTextEditRef.GetHtmlAsync();
+            contentAsDeltaJson = await richTextEditRef.GetDeltaAsync();
+            contentAsText = await richTextEditRef.GetTextAsync();
+        }
 
+        public async Task OnSave()
+        {
+            savedContent = await richTextEditRef.GetHtmlAsync();
+            await richTextEditRef.ClearAsync();
+        }
 
-	}
+    }
 
-	public class TextModel
-	{
-		public string Id { get; set; }
-		public string Text { get; set; }
-
-
-	}
+	
 }

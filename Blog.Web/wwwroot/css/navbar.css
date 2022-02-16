@@ -16,3 +16,7 @@
 .nav-item a.active {
   text-decoration: none;
 }
+
+.nav-item {
+  font-size: xx-large;
+}
