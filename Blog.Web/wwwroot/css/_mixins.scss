@@ -1,3 +1,35 @@
 ﻿@mixin shadow {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+@mixin black-and-white($state) {
+    @if $state {
+        -webkit-filter: grayscale(0);
+        filter: none;
+    }
+    @else {
+        filter: gray;
+        -webkit-filter: grayscale(1); 
+        filter: grayscale(1);  
+    }
+}
+
+
+/* underline animation */
+@mixin underline {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #197CA4;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+@mixin underline-hover {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

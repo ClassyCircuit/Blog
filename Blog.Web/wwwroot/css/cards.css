@@ -1,9 +1,12 @@
-﻿.cards {
+﻿/* underline animation */
+/* all cards */
+.cards {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
 }
 
+/* single card */
 .card {
   display: flex;
   max-width: 16rem;
@@ -11,26 +14,47 @@
   flex-flow: row wrap;
   justify-content: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  /*    align-items: center;
+}
+
+.card:hover {
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  /*    @include black-and-white($state: false);
   */
+  cursor: pointer;
 }
 
-.card img {
-  width: 100%;
-  height: auto;
-}
-
-/*.card > h4 {
-    margin: unset;
-    margin-top: 1rem;
-}*/
-/*.card > p {
-    margin: 0;
-    padding: unset;
-}*/
+/* Title */
 .card .title {
   margin: 1rem 0;
   font-weight: bold;
+  display: inline-block;
+  position: relative;
+  color: #197CA4;
+}
+
+.card > .title:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #197CA4;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.card:hover > .title:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Image */
+.card img {
+  width: 100%;
+  height: auto;
+  /*    @include black-and-white($state: true);*/
 }
 
 .card .description {

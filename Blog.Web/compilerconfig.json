@@ -34,5 +34,9 @@
   {
     "outputFile": "Components/CardLayout.razor.css",
     "inputFile": "Components/CardLayout.razor.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/animations.css",
+    "inputFile": "wwwroot/css/animations.scss"
   }
 ]

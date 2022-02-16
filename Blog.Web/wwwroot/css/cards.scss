@@ -1,10 +1,14 @@
 ﻿@use 'mixins' as *;
 
+/* all cards */
+
 .cards {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
 }
+
+/* single card */
 
 .card {
     display: flex;
@@ -13,28 +17,45 @@
     flex-flow: row wrap;
     justify-content: center;
     @include shadow;
-/*    align-items: center;
-*/}
 
-.card img {
-    width: 100%;
-    height: auto;
 }
 
-/*.card > h4 {
-    margin: unset;
-    margin-top: 1rem;
-}*/
+.card:hover {
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+/*    @include black-and-white($state: false);
+*/    
+    cursor: pointer;
+}
 
-/*.card > p {
-    margin: 0;
-    padding: unset;
-}*/
+/* Title */
 
 .card .title {
     margin: 1rem 0;
     font-weight: bold;
+
+    display: inline-block;
+    position: relative;
+    color: #197CA4;
 }
+
+.card > .title:after{
+    @include underline;
+}
+
+.card:hover > .title:after {
+    @include underline-hover;
+}
+
+/* Image */
+
+
+.card img {
+    width: 100%;
+    height: auto;
+/*    @include black-and-white($state: true);*/
+}
+
+
 
 .card .description {
     padding: 0 1rem 1rem 1rem;
