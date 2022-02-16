@@ -9,8 +9,9 @@
     max-width: 100%;
     margin: 0;
     grid-template-columns: auto;
-/*    grid-template-columns: minmax(1.2rem, 1fr) auto minmax(1.2rem, 1fr);*/
-    grid-template-rows: 4.125rem 8rem 1fr 4.125rem;
+    /*    grid-template-columns: minmax(1.2rem, 1fr) auto minmax(1.2rem, 1fr);*/
+    /*    grid-template-rows: 4.125rem minmax(4.2rem, 8rem) 1fr 4.125rem;*/
+    grid-auto-rows: minmax(min-content, max-content);
 }
 
 .page-item {
@@ -18,7 +19,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*@include shadow;*/
+    /*@include shadow;*/ 
 }
 
 .navbar-container {
@@ -32,6 +33,7 @@
     grid-column: 1 / -1;
     grid-row: 2 / 2;
     background-color: var(--color-royal-purple);
+    max-height: 8rem;
 }
 
 .content-container {

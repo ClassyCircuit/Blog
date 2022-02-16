@@ -20,8 +20,9 @@ namespace Blog.Web
 			Host.CreateDefaultBuilder(args)
 				.ConfigureWebHostDefaults(webBuilder =>
 				{
-				/*	webBuilder.UseKestrel();*/
+/*					webBuilder.UseKestrel();*/
 					webBuilder.UseStartup<Startup>();
+					webBuilder.UseUrls("https://192.168.1.122:65432");
 				});
 	}
 }

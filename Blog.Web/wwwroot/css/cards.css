@@ -5,13 +5,34 @@
 }
 
 .card {
-  max-width: 10rem;
-  margin: 0 1rem;
   display: flex;
+  max-width: 16rem;
+  margin: 1rem 1rem;
   flex-flow: row wrap;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /*    align-items: center;
+  */
 }
 
-.card > img {
+.card img {
   width: 100%;
   height: auto;
+}
+
+/*.card > h4 {
+    margin: unset;
+    margin-top: 1rem;
+}*/
+/*.card > p {
+    margin: 0;
+    padding: unset;
+}*/
+.card .title {
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+.card .description {
+  padding: 0 1rem 1rem 1rem;
 }

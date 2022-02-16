@@ -1,17 +1,41 @@
-﻿.cards {
+﻿@use 'mixins' as *;
+
+.cards {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
 }
 
 .card {
-    max-width: 10rem;
-    margin: 0 1rem;
     display: flex;
+    max-width: 16rem;
+    margin: 1rem 1rem;
     flex-flow: row wrap;
-}
+    justify-content: center;
+    @include shadow;
+/*    align-items: center;
+*/}
 
-.card > img {
+.card img {
     width: 100%;
     height: auto;
+}
+
+/*.card > h4 {
+    margin: unset;
+    margin-top: 1rem;
+}*/
+
+/*.card > p {
+    margin: 0;
+    padding: unset;
+}*/
+
+.card .title {
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.card .description {
+    padding: 0 1rem 1rem 1rem;
 }

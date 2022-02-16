@@ -1,1 +1,1 @@
-﻿.article-grid{display:grid;grid-template-columns:minmax(1.2rem,1fr) minmax(auto,57ch) minmax(1.2rem,1fr);}
+﻿.article-grid{display:grid;grid-template-columns:minmax(1.2rem,1fr) minmax(0,57ch) minmax(1.2rem,1fr);}
