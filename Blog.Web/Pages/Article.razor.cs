@@ -1,5 +1,4 @@
-﻿using Blazorise.RichTextEdit;
-using Microsoft.AspNetCore.Components;
+﻿using Microsoft.AspNetCore.Components;
 using System.Threading.Tasks;
 
 namespace Blog.Web.Pages
@@ -8,5 +7,6 @@ namespace Blog.Web.Pages
 	{
 		[Parameter]
 		public string Id { get; set; }
+		protected string Content { get; set; }
     }
 }

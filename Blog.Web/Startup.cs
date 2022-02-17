@@ -1,7 +1,3 @@
-using Blazorise;
-using Blazorise.Bootstrap5;
-using Blazorise.Icons.FontAwesome;
-using Blazorise.RichTextEdit;
 using Blog.Web.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
@@ -38,19 +34,6 @@ namespace Blog.Web
 				//pipeline.AddScssBundle("/bundle.css", "/css/style.scss", "/css/layout.scss", "/css/_colors.scss", "/css/_base.scss");
 				pipeline.CompileScssFiles();
 			});
-
-/*			services
-			  .AddBlazorise(options =>
-			  {
-				  options.ChangeTextOnKeyPress = true; // optional
-			  })
-			  .AddBootstrap5Providers()
-			  .AddFontAwesomeIcons();
-
-			services.AddBlazoriseRichTextEdit(options =>
-			{
-				options.UseShowTheme = true;
-			});*/
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

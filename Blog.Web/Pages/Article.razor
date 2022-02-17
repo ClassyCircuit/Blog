@@ -3,7 +3,11 @@
 <ArticleLayout>
     <h3>Article id: @Id</h3>
 
-    <Editor />
+    <Editor
+    ScriptSrc="js/tinymce/tinymce.min.js"
+    @bind-Value=Content />
+
+    @((MarkupString)Content)
 
 </ArticleLayout>
 
