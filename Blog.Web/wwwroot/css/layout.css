@@ -91,3 +91,18 @@ p, span.bullet {
   width: 100%;
   height: 100%;
 }
+
+.editor-grid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+
+.editor {
+  grid-column: 1/-1;
+  grid-row: 1/1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

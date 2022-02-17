@@ -2,7 +2,7 @@
 
 namespace Blog.Web.Components
 {
-  public partial class Cardd : ComponentBase
+  public partial class Card : ComponentBase
   {
 	    [Parameter]
 	    public int Id { get; set; }
