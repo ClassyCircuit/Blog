@@ -3,38 +3,6 @@
 <ArticleLayout>
     <h3>Article id: @Id</h3>
 
-<RichTextEdit @ref="richTextEditRef"
-              Theme="RichTextEditTheme.Snow"
-              ContentChanged="@OnContentChanged"
-              PlaceHolder="Type your post here..."
-              ReadOnly="@readOnly"
-              SubmitOnEnter="false"
-              EnterPressed="@OnSave"
-              ToolbarPosition="Placement.Bottom"
-              
->
-    <Editor>My example content</Editor>
-    <Toolbar>
-        <RichTextEditToolbarGroup>
-            <RichTextEditToolbarButton Action="RichTextEditAction.Bold" />
-            <RichTextEditToolbarButton Action="RichTextEditAction.Italic" />
-            <RichTextEditToolbarSelect Action="RichTextEditAction.Size">
-                <RichTextEditToolbarSelectItem Value="small" />
-                <RichTextEditToolbarSelectItem Selected="true" />
-                <RichTextEditToolbarSelectItem Value="large" />
-                <RichTextEditToolbarSelectItem Value="huge">Very Big</RichTextEditToolbarSelectItem>
-            </RichTextEditToolbarSelect>
-            <RichTextEditToolbarButton Action="RichTextEditAction.List" Value="ordered" />
-            <RichTextEditToolbarButton Action="RichTextEditAction.List" Value="bullet" />
-        </RichTextEditToolbarGroup>
-        <!-- Custom toolbar content -->
-        <RichTextEditToolbarGroup Float="Float.End">
-            <Button onClick="window.open('https://www.quilljs.com/','quilljs')"><Icon Name="IconName.InfoCircle" /></Button>
-            <Button Clicked="@OnSave"><Icon Name="IconName.Save" /></Button>
-        </RichTextEditToolbarGroup>
-    </Toolbar>
-</RichTextEdit>
-
 
 </ArticleLayout>
 

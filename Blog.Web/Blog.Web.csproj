@@ -24,8 +24,4 @@
     <PackageReference Include="LigerShark.WebOptimizer.Sass" Version="3.0.82-beta" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\js\" />
-  </ItemGroup>
-
 </Project>

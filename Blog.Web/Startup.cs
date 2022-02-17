@@ -39,18 +39,18 @@ namespace Blog.Web
 				pipeline.CompileScssFiles();
 			});
 
-			services
+/*			services
 			  .AddBlazorise(options =>
 			  {
 				  options.ChangeTextOnKeyPress = true; // optional
-				  })
+			  })
 			  .AddBootstrap5Providers()
 			  .AddFontAwesomeIcons();
 
-			services.AddBlazoriseRichTextEdit(options => 
+			services.AddBlazoriseRichTextEdit(options =>
 			{
-/*				options.UseShowTheme = true;*/
-			});
+				options.UseShowTheme = true;
+			});*/
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
