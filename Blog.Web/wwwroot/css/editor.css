@@ -1,0 +1,6 @@
+﻿.editor {
+  display: flex;
+  overflow: hidden;
+  max-width: 57ch;
+  background-color: red;
+}

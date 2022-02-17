@@ -15,8 +15,8 @@ namespace Blog.Web.Pages
 			{"menubar", "file edit view insert format tools table help"},
 
 			{"toolbar", "undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media template link anchor codesample | ltr rtl" },
-			{"width", 1300},
-			{"height", 500},
+/*			{"width", 1300},
+			{"height", 500},*/
 			{"toolbar_sticky", true},
 			{"paste_data_images", true},
 			{"image_advtab", true},

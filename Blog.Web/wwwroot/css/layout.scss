@@ -40,6 +40,7 @@
     grid-column: 1 / -1;
     grid-row: 3 / 3;
     margin-bottom: 1rem;
+    min-height: 100vh;
 }
 
 .footer-container {
@@ -58,19 +59,4 @@
 .logo-container > a {
     width: 100%;
     height: 100%;
-}
-
-.editor-grid {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-}
-
-.editor {
-    grid-column: 1 / -1;
-    grid-row: 1 / 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }

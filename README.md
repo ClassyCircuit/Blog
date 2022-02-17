@@ -9,6 +9,7 @@ Source code for my personal blog.
 * footer sticky at bottom
 * navbar sticky at top
 * TinyMCE needs a separate row which is wider than article itself, but article stays within its own bounds to have correct preview.
+* Mark article as private (change visibility) - useful for WIP articles
 
 Text editor summary:
 

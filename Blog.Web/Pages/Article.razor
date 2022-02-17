@@ -1,19 +1,17 @@
 ﻿@page "/article/{id}"
 
 <ArticleLayout>
-    Preview:
-    @((MarkupString)Content)
-
-    @*<hr />
-    Raw:
-    <textarea @bind=Content @bind:event="oninput"></textarea>*@
-
-</ArticleLayout>
-
-<div class="editor-grid">
     <div class="editor">
         <Editor ScriptSrc="js/tinymce/tinymce.min.js"
             Conf=@EditorConfig
             @bind-Value=Content />
     </div>
-</div>
+            
+    <p>Preview</p>
+    @((MarkupString)Content)
+
+    @*<hr />
+    Raw:
+    <textarea @bind=Content @bind:event="oninput"></textarea>*@
+    <p>asdasdasdasdasdasdasdasdasdasdasdasdaadfgadfgsfgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsaadfgdfasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd</p>
+</ArticleLayout>
