@@ -1,13 +1,19 @@
 ﻿@page "/article/{id}"
 
 <ArticleLayout>
-    <h3>Article id: @Id</h3>
-
-    <Editor
-    ScriptSrc="js/tinymce/tinymce.min.js"
-    @bind-Value=Content />
-
+    Preview:
     @((MarkupString)Content)
+
+    @*<hr />
+    Raw:
+    <textarea @bind=Content @bind:event="oninput"></textarea>*@
 
 </ArticleLayout>
 
+<div class="editor-grid">
+    <div class="editor">
+        <Editor ScriptSrc="js/tinymce/tinymce.min.js"
+            Conf=@EditorConfig
+            @bind-Value=Content />
+    </div>
+</div>

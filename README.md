@@ -8,9 +8,12 @@ Source code for my personal blog.
 * When making narrower - logo height must become smaller (along with img)
 * footer sticky at bottom
 * navbar sticky at top
-
+* TinyMCE needs a separate row which is wider than article itself, but article stays within its own bounds to have correct preview.
 
 Text editor summary:
 
 DO NOT USE:
 CKEditor - shitty documentation, toolbar config sucks, no blazor support at all, hacky.
+
+USE:
+TinyMCE self hosted version, integrates nicely with Blazor out of the box.
