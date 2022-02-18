@@ -18,10 +18,7 @@ namespace Blog.Data
 
 		protected override void OnModelCreating(ModelBuilder builder)
 		{
-			builder.Entity<Article>()
-				.HasOne(t => t.Text)
-				.WithOne(t => t.Article)
-				.HasForeignKey<ArticleText>(t => t.ArticleId);
+
 		}
 
 		public override int SaveChanges()
@@ -51,6 +48,7 @@ namespace Blog.Data
 				{
 					case EntityState.Added:
 						model.CreatedAt = DateTime.UtcNow;
+						model.UpdatedAt = DateTime.UtcNow;
 						break;
 					case EntityState.Modified:
 						model.UpdatedAt = DateTime.UtcNow;

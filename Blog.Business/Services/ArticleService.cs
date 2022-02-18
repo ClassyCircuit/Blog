@@ -12,14 +12,32 @@ namespace Blog.Business.Services
 			_articleRepository = articleRepository;
 		}
 
-		public async Task Add()
+		public async Task<int> AddDraft()
 		{
 			var article = new Article()
 			{
-				Title = "Work In Progress"
+				Title = "Work In Progress",
+				Description = "WIP",
+				IsPublished = false,
+				Text = new ArticleText("Start writing..")
 			};
 
-			await _articleRepository.Add(article);
+			return await _articleRepository.Add(article);
+		}
+
+		public async Task<int[]> GetRecentArticles(int maxLimit)
+		{
+			return await _articleRepository.GetRecentArticleIds(maxLimit);
+		}
+
+		public async Task SaveContent(int articleId, string content)
+		{
+			await _articleRepository.UpdateContent(articleId: articleId, content: content);
+		}
+
+		public async Task<string> GetContent(int articleId)
+		{
+			return await _articleRepository.GetContent(articleId: articleId);
 		}
 	}
 }

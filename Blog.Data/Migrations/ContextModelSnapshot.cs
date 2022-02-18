@@ -45,11 +45,11 @@ namespace Blog.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("ArticleTextId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("AuthorId")
                         .HasColumnType("int");
+
+                    b.Property<string>("CardImage")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("CategoryId")
                         .HasColumnType("int");
@@ -63,6 +63,9 @@ namespace Blog.Data.Migrations
                     b.Property<bool>("IsPublished")
                         .HasColumnType("bit");
 
+                    b.Property<int?>("TextId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
@@ -75,6 +78,8 @@ namespace Blog.Data.Migrations
 
                     b.HasIndex("CategoryId");
 
+                    b.HasIndex("TextId");
+
                     b.ToTable("Articles");
                 });
 
@@ -86,9 +91,6 @@ namespace Blog.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("ArticleId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Content")
                         .HasColumnType("nvarchar(max)");
 
@@ -99,9 +101,6 @@ namespace Blog.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ArticleId")
-                        .IsUnique();
 
                     b.ToTable("ArticleText");
                 });
@@ -226,20 +225,15 @@ namespace Blog.Data.Migrations
                         .WithMany("Articles")
                         .HasForeignKey("CategoryId");
 
+                    b.HasOne("Blog.Business.Models.ArticleText", "Text")
+                        .WithMany()
+                        .HasForeignKey("TextId");
+
                     b.Navigation("Author");
 
                     b.Navigation("Category");
-                });
 
-            modelBuilder.Entity("Blog.Business.Models.ArticleText", b =>
-                {
-                    b.HasOne("Blog.Business.Models.Article", "Article")
-                        .WithOne("Text")
-                        .HasForeignKey("Blog.Business.Models.ArticleText", "ArticleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Article");
+                    b.Navigation("Text");
                 });
 
             modelBuilder.Entity("Blog.Business.Models.Comment", b =>
@@ -260,8 +254,6 @@ namespace Blog.Data.Migrations
             modelBuilder.Entity("Blog.Business.Models.Article", b =>
                 {
                     b.Navigation("Comments");
-
-                    b.Navigation("Text");
                 });
 
             modelBuilder.Entity("Blog.Business.Models.Category", b =>

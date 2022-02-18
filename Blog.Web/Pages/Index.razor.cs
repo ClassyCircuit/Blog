@@ -12,6 +12,13 @@ namespace Blog.Web.Pages
 		[Inject]
 		private ArticleService _articleService { get; set; }
 
+		protected int[] Cards { get; set; }
+
+		protected override async Task OnInitializedAsync()
+		{
+			Cards = await _articleService.GetRecentArticles(maxLimit: 15);
+		}
+
 		protected void GoToArticle(int id)
 		{
 			_navigationManager.NavigateTo($"article/{id}");
@@ -19,7 +26,8 @@ namespace Blog.Web.Pages
 
 		protected async Task AddArticle()
 		{
-			await _articleService.Add();
+			var articleId = await _articleService.AddDraft();
+			GoToArticle(articleId);
 		}
 	}
 }

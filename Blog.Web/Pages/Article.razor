@@ -1,15 +1,14 @@
 ﻿@page "/article/{id}"
 
-<ArticleLayout>
+<ArticleLayout>  
+    <p>Preview</p>
+    <hr />
+    @((MarkupString)Content)
+
+    <hr />
     <div class="editor">
         <Editor Conf=@EditorConfig @bind-Value=Content />
     </div>
-            
-    <p>Preview</p>
-    @((MarkupString)Content)
-
-    @*<hr />
-    Raw:
-    <textarea @bind=Content @bind:event="oninput"></textarea>*@
-    <p>asdasdasdasdasdasdasdasdasdasdasdasdaadfgadfgsfgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsafgadfgsaadfgdfasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd</p>
+    <button @onclick="Save">Save</button>
+    <button>Discard="Discard"</button>
 </ArticleLayout>
