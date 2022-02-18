@@ -1,7 +1,12 @@
-﻿<div class="hvr-grow">
+﻿<div class="hvr-grow card-outer">
     <div class="card" @onclick="(() => GoToArticle(Id))">
         <div><img src="https://picsum.photos/350/200" width="350" height="200"/></div>
         <div class="title underline-animation">Article about coding</div>
-        <div class="description">Do bears like programming? Click here to find out!</div>
+        @if(Id == 2){
+            <div class="description">Do bears like programmingprogrammingprogrammingprogrammingprogrammingprogrammingprogramming ? Click here to find out!</div>
+        }
+        else{
+            <div class="description">Do bears like programming ? Click here to find out!</div>
+        }
     </div>
 </div>

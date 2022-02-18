@@ -4,3 +4,7 @@
   align-items: flex-start;
   min-height: 50vh;
 }
+
+.article {
+  word-break: break-word;
+}
