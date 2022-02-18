@@ -17,6 +17,14 @@ namespace Blog.Data
 		public DbSet<Tag> Tags { get; set; }
 		public DbSet<User> Users { get; set; }
 
+		protected override void OnModelCreating(ModelBuilder builder)
+		{
+			builder.Entity<Article>()
+				.HasOne(t => t.Text)
+				.WithOne(t => t.Article)
+				.HasForeignKey<ArticleText>(t => t.ArticleId);
+		}
+
 		public override int SaveChanges()
 		{
 			UpdateEntityDates();

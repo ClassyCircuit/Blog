@@ -2,7 +2,9 @@
 {
 	public class ArticleText : BaseModel
 	{
-		public Article Article { get; set; }
 		public string Content { get; set; }
+
+		public int ArticleId { get; set; }
+		public Article Article { get; set; }
 	}
 }

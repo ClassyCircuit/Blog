@@ -21,3 +21,4 @@ TinyMCE self hosted version, integrates nicely with Blazor out of the box.
 
 EF commands:
 dotnet ef migrations add InitialStructure --context Context --startup-project ..\Blog.Web
+dotnet ef database update --context Context --startup-project ..\Blog.Web
