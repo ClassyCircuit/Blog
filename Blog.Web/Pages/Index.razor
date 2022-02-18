@@ -4,12 +4,16 @@
 
 <CardLayout>
 
-<div class="cards">
-  @for(int i = 0; i < 10; i++)
-  {
-    <Card id="@i"/>
-  }
-</div>
+    <button @onclick="AddArticle">Add New Article</button>
+	<div class="cards">
+	@if(Cards != null && Cards.Length > 0)
+	{
+		@foreach(var card in Cards)
+		  {
+			<Card id="@card"/>
+		  }
+	}
+	</div>
 
 </CardLayout>
 

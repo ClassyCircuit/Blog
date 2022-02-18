@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
+	  <Nullable>disable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,11 +20,21 @@
 
   <ItemGroup>
     <PackageReference Include="LigerShark.WebOptimizer.Sass" Version="3.0.82-beta" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="TinyMCE.Blazor" Version="0.0.9" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="wwwroot\js\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Blog.Business\Blog.Business.csproj" />
+    <ProjectReference Include="..\Blog.Common\Blog.Common.csproj" />
+    <ProjectReference Include="..\Blog.Data\Blog.Data.csproj" />
   </ItemGroup>
 
 </Project>
