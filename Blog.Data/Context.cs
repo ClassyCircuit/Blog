@@ -7,7 +7,6 @@ namespace Blog.Data
 	{
 		public Context(DbContextOptions options) : base(options)
 		{
-
 		}
 
 		public DbSet<Article> Articles { get; set; }

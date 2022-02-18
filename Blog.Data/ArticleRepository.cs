@@ -1,9 +1,10 @@
-﻿using Blog.Business.Models;
+﻿using Blog.Business.Interfaces;
+using Blog.Business.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Blog.Data
 {
-	public class ArticleRepository : IRepository<Article>
+	public class ArticleRepository : IArticleRepository
 	{
 		private readonly IDbContextFactory<Context> _dbFactory;
 

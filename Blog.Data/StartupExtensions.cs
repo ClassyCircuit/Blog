@@ -1,4 +1,4 @@
-﻿using Blog.Business.Models;
+﻿using Blog.Business.Interfaces;
 using Blog.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,9 +15,7 @@ namespace Blog.Data
 																	b.CommandTimeout(90);
 																}));
 
-			services.AddScoped<IRepository<Article>, ArticleRepository>();
-
-
+			services.AddScoped<IArticleRepository, ArticleRepository>();
 		}
 
 	}
