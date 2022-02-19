@@ -1,4 +1,6 @@
-﻿.navbar {
+﻿@use 'colors';
+
+.navbar {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: unset;
@@ -9,8 +11,8 @@
 }
 
 .nav-item a {
-    color: white;
-    text-decoration: none;
+	text-decoration: none;
+	color: var(--color-yellow);
 }
 
 .nav-item a.active {
@@ -18,5 +20,5 @@
 }
 
 .nav-item {
-    font-size: xx-large;
+	font-size: x-large;
 }

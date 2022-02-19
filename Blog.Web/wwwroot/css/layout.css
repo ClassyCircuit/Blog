@@ -29,9 +29,22 @@ p, span.bullet {
   line-height: 1.7rem;
 }
 
+code {
+  font-family: droid-sans-mono, monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nav-link {
+  font-family: droid-sans-mono, monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* underline animation */
 :root {
   --color-royal-purple: #4B0145;
+  --color-yellow: #F8C23A;
 }
 
 .page {
@@ -72,6 +85,7 @@ p, span.bullet {
   grid-column: 1/-1;
   grid-row: 3/3;
   margin-bottom: 1rem;
+  min-height: 100vh;
 }
 
 .footer-container {
@@ -90,19 +104,4 @@ p, span.bullet {
 .logo-container > a {
   width: 100%;
   height: 100%;
-}
-
-.editor-grid {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-}
-
-.editor {
-  grid-column: 1/-1;
-  grid-row: 1/1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }

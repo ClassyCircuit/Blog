@@ -26,6 +26,8 @@ namespace Blog.Web
 		{
 			var cfg = new Configuration();
 			Configuration.Bind(cfg);
+			cfg.General.DbConnection = cfg.General.DbConnection.Replace("pwhere", Configuration["DbPass"]);
+
 			services.Configure<Configuration>(Configuration);
 			services.AddScoped(sp => sp.GetService<IOptionsSnapshot<Configuration>>().Value);
 

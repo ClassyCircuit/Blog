@@ -5,11 +5,11 @@ VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.Web", "Blog.Web\Blog.Web.csproj", "{6FFDBF28-F6BB-4236-84E6-D019409A8C45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.Data", "Blog.Data\Blog.Data.csproj", "{FEE5250D-DAE9-4B5E-8EAE-6323F645C24C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.Data", "Blog.Data\Blog.Data.csproj", "{FEE5250D-DAE9-4B5E-8EAE-6323F645C24C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.Business", "Blog.Business\Blog.Business.csproj", "{ACD96264-501F-4CAA-AF82-376FE2BBDEBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.Business", "Blog.Business\Blog.Business.csproj", "{ACD96264-501F-4CAA-AF82-376FE2BBDEBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.Common", "Blog.Common\Blog.Common.csproj", "{36B3234B-A581-47BE-A1BE-C9C361D36BA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.Common", "Blog.Common\Blog.Common.csproj", "{36B3234B-A581-47BE-A1BE-C9C361D36BA4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{806817BA-842D-4E35-AFDB-AAF0B78D3297}"
 EndProject

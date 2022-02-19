@@ -1,10 +1,7 @@
 ﻿@page "/article/{id}"
 
 <ArticleLayout>  
-    <p>Preview</p>
-    <hr />
     @((MarkupString)Content)
-
     <hr />
     <div class="editor">
         <Editor Conf=@EditorConfig @bind-Value=Content />

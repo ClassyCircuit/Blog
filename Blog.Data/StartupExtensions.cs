@@ -9,7 +9,7 @@ namespace Blog.Data
 	{
 		public static void AddDataLayer(this IServiceCollection services, Configuration config)
 		{
-			services.AddDbContextFactory<Context>(options => options.UseSqlServer(config.General.DbConnection,
+			services.AddDbContextFactory<Context>(options => options.UseNpgsql(config.General.DbConnection,
 																b =>
 																{
 																	b.CommandTimeout(90);
