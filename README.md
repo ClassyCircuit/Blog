@@ -1,7 +1,7 @@
 [![Build](https://github.com/janissimsons/Blog/actions/workflows/dotnet.yml/badge.svg)](https://github.com/janissimsons/Blog/actions/workflows/dotnet.yml)
 
 # [ janis writes code ] - coding blog
-Source code for janiswritescode.com
+Source code for [janiswritescode.com](janiswritescode.com)
 
 ## Production Release v1
 - [x] Production server is setup
