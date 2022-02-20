@@ -61,3 +61,6 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
+**/wwwroot/js/tinymce/* linguist-vendored
+**/wwwroot/css/bootstrap/* linguist-vendored
+**/wwwroot/css/open-iconic/* linguist-vendored

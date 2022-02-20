@@ -26,4 +26,5 @@ EF commands:
 dotnet ef migrations add Init --context Context --startup-project ..\Blog.Web  
 dotnet ef database update --context Context --startup-project ..\Blog.Web  
 dotnet ef migrations remove --context Context --startup-project ..\Blog.Web  
-
+dotnet ef migrations script --context Context --startup-project ..\Blog.Web  
+dotnet publish --configuration Release /p:EnvironmentName=Production --output ./prod
