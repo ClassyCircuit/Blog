@@ -1,4 +1,7 @@
+using Blog.Data;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 namespace Blog.Web
@@ -7,7 +10,15 @@ namespace Blog.Web
 	{
 		public static void Main(string[] args)
 		{
-			CreateHostBuilder(args).Build().Run();
+			var host = CreateHostBuilder(args).Build();
+
+			using (var scope = host.Services.CreateScope())
+			{
+				var db = scope.ServiceProvider.GetRequiredService<Context>();
+				db.Database.Migrate();
+			}
+
+			host.Run();
 		}
 
 		public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -15,7 +26,7 @@ namespace Blog.Web
 				.ConfigureWebHostDefaults(webBuilder =>
 				{
 					webBuilder.UseStartup<Startup>();
-					webBuilder.UseUrls("https://192.168.1.122:65432");
+					webBuilder.UseUrls("http://*:5000", "https://*:5001");
 				});
 	}
 }

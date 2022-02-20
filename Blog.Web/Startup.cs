@@ -4,10 +4,12 @@ using Blog.Data;
 using Blog.Web.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
+using System;
 
 namespace Blog.Web
 {
@@ -26,7 +28,10 @@ namespace Blog.Web
 		{
 			var cfg = new Configuration();
 			Configuration.Bind(cfg);
-			cfg.General.DbConnection = cfg.General.DbConnection.Replace("pwhere", Configuration["DbPass"]);
+			var dbUser = Environment.GetEnvironmentVariable("DbUser", EnvironmentVariableTarget.Machine);
+			var dbPass = Environment.GetEnvironmentVariable("DbPass", EnvironmentVariableTarget.Machine);
+			cfg.General.DbConnection = cfg.General.DbConnection.Replace("{dbuser}", dbUser);
+			cfg.General.DbConnection = cfg.General.DbConnection.Replace("{dbpass}", dbPass);
 
 			services.Configure<Configuration>(Configuration);
 			services.AddScoped(sp => sp.GetService<IOptionsSnapshot<Configuration>>().Value);
@@ -47,6 +52,10 @@ namespace Blog.Web
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 		{
+			app.UseForwardedHeaders(new ForwardedHeadersOptions
+			{
+				ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+			});
 
 			if (env.IsDevelopment())
 			{
