@@ -4,6 +4,7 @@
 Source code for janiswritescode.com
 
 ## Production Release v1
+- [x] Production server is setup
 - [ ] Cards content stretches entire row's height
 - [ ] Article layout fixed
 - [ ] Edit card (title, description, image) - tinymce inline editing
@@ -11,6 +12,7 @@ Source code for janiswritescode.com
 - [ ] Change article visibility. Mark as draft or published  
 - [ ] navbar sticky at top  
 - [ ] Authentication
+- [ ] CI/CD pipelines are ready
 
 ## Backlog  
 - [ ] Reading indicator line (scroll and update how much article is left to read)  
