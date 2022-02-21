@@ -42,5 +42,5 @@ jobs:
           whoami
           sudo systemctl stop blog.service
           sudo rm -rf /var/www/blog/prod/
-          sudo tar -xzf /var/www/blog/staging/artifact/blog.tar.gz -C /var/www/blog/
+          sudo tar -xzf /var/www/blog/staging/artifact/prod.tar.gz -C /var/www/blog/
           sudo systemctl start blog.service
