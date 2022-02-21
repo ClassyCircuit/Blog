@@ -21,9 +21,10 @@ jobs:
       run: dotnet publish -c Release /p:EnvironmentName=Production --framework net6.0 --runtime linux-x64  --no-self-contained -o "blog"
     - name: Test
       run: dotnet test -c Release --no-build --no-restore --verbosity normal
+    - name: Compress
+      run: tar czvf "blog.tar.gz" "blog"
     - name: Save Artifact
       uses: actions/upload-artifact@v2.3.1
       with:
-        name: blog
-        path: blog
+        path: blog.tar.gz
         if-no-files-found: error
