@@ -20,7 +20,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build -c Release /p:EnvironmentName=Production --framework net6.0 --runtime linux-x64 --no-self-contained --no-restore
+      run: dotnet build -c Release /p:EnvironmentName=Production --framework net6.0 --no-self-contained --no-restore
     - name: Test
       run: dotnet test -c Release --no-build --verbosity normal
     - name: Publish
