@@ -22,9 +22,10 @@ jobs:
     - name: Test
       run: dotnet test -c Release --no-build --no-restore --verbosity normal
     - name: Compress
-      run: tar77 czvf "blog.tar.gz" "blog"
-    - name: Save Artifact
+      run: tar czvf "blog.tar.gz" "blog"
+    - name: Upload Artifact
       uses: actions/upload-artifact@v2.3.1
       with:
+        name: artifact
         path: blog.tar.gz
         if-no-files-found: error
