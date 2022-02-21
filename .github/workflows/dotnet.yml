@@ -17,14 +17,10 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 6.0.x
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build -c Release /p:EnvironmentName=Production --no-self-contained --no-restore
-    - name: Test
-      run: dotnet test -c Release --no-build --verbosity normal
     - name: Publish
-      run: dotnet publish -c Release /p:EnvironmentName=Production --framework net6.0 --runtime linux-x64  --no-self-contained --no-restore --no-build -o "blog"
+      run: dotnet publish -c Release /p:EnvironmentName=Production --framework net6.0 --runtime linux-x64  --no-self-contained -o "blog"
+    - name: Test
+      run: dotnet test -c Release --no-build --no-restore --verbosity normal
     - name: Save Artifact
       uses: actions/upload-artifact@v2.3.1
       with:
