@@ -1,4 +1,5 @@
-[![Build](https://github.com/janissimsons/Blog/actions/workflows/dotnet.yml/badge.svg)](https://github.com/janissimsons/Blog/actions/workflows/dotnet.yml)
+[![Build](https://github.com/janissimsons/Blog/actions/workflows/build.yml/badge.svg)](https://github.com/janissimsons/Blog/actions/workflows/build.yml)  
+[![Deploy](https://github.com/janissimsons/Blog/actions/workflows/deploy.yml/badge.svg)](https://github.com/janissimsons/Blog/actions/workflows/deploy.yml)
 
 # [ janis writes code ] - coding blog
 Source code for [janiswritescode.com](janiswritescode.com)
