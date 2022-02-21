@@ -22,6 +22,7 @@ Source code for [janiswritescode.com](janiswritescode.com)
 - [ ] Tags, categories
 - [ ] Automatic DB backups
 - [ ] Save all Linux configs, for disaster recovery
+- [ ] Automatic versioning (git tags)
 
 ## Done
 - [x] When resizing browser - logo height must become smaller (along with img)  
@@ -33,4 +34,4 @@ dotnet ef migrations add Init --context Context --startup-project ..\Blog.Web
 dotnet ef database update --context Context --startup-project ..\Blog.Web  
 dotnet ef migrations remove --context Context --startup-project ..\Blog.Web  
 dotnet ef migrations script --context Context --startup-project ..\Blog.Web  
-dotnet publish --configuration Release /p:EnvironmentName=Production --output ./prod
+dotnet publish -c Release -o "prod" --framework net6.0 --runtime linux-x64 /p:EnvironmentName=Production --no-self-contained
