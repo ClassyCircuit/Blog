@@ -20,16 +20,14 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build -c Release /p:EnvironmentName=Production --no-restore
+      run: dotnet build -c Release /p:EnvironmentName=Production --framework net6.0 --runtime linux-x64 --no-self-contained --no-restore
     - name: Test
       run: dotnet test -c Release --no-build --verbosity normal
     - name: Publish
-      run: dotnet publish -c Release -o "blog" --framework net6.0 --runtime linux-x64 /p:EnvironmentName=Production --no-self-contained
-    - name: Compress Release
-      run: tar czvf "blog.tar.gz" "blog"
+      run: dotnet publish -c Release /p:EnvironmentName=Production --framework net6.0 --runtime linux-x64  --no-self-contained --no-restore --no-build -o "blog"
     - name: Save Artifact
       uses: actions/upload-artifact@v2.3.1
       with:
         name: blog
-        path: blog.tar.gz
+        path: blog
         if-no-files-found: error
