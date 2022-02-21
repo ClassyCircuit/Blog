@@ -40,3 +40,5 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           whoami
+          sudo rm -rf /var/www/blog/prod/
+          sudo unzip /var/www/blog/staging/artifact.zip -d /var/www/blog/prod/
