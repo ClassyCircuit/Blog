@@ -20,6 +20,8 @@ Source code for [janiswritescode.com](janiswritescode.com)
 - [ ] TinyMCE needs a separate tab. Like github editor.  
 - [ ] Github, gmail integration for comments section
 - [ ] Tags, categories
+- [ ] Automatic DB backups
+- [ ] Save all Linux configs, for disaster recovery
 
 ## Done
 - [x] When resizing browser - logo height must become smaller (along with img)  
