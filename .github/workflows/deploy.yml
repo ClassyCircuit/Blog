@@ -13,7 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Download Build Artifact
-      uses: actions/download-artifact@v2.1.0
+      uses: dawidd6/action-download-artifact@v2
+      with:
+        workflow: build.yml
+        workflow_conclusion: success
+        name: artifact
     - name: Copy Artifact to Server
       uses: appleboy/scp-action@master
       with:
