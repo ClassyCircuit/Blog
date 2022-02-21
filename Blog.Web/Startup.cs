@@ -28,8 +28,8 @@ namespace Blog.Web
 		{
 			var cfg = new Configuration();
 			Configuration.Bind(cfg);
-			var dbUser = Environment.GetEnvironmentVariable("DbUser", EnvironmentVariableTarget.Machine);
-			var dbPass = Environment.GetEnvironmentVariable("DbPass", EnvironmentVariableTarget.Machine);
+			var dbUser = Environment.GetEnvironmentVariable("DbUser");
+			var dbPass = Environment.GetEnvironmentVariable("DbPass");
 			cfg.General.DbConnection = cfg.General.DbConnection.Replace("{dbuser}", dbUser);
 			cfg.General.DbConnection = cfg.General.DbConnection.Replace("{dbpass}", dbPass);
 
