@@ -22,7 +22,7 @@ jobs:
     - name: Test
       run: dotnet test -c Release --no-build --no-restore --verbosity normal
     - name: Compress
-      run: tar czvf "blog.tar.gz" "blog"
+      run: tar77 czvf "blog.tar.gz" "blog"
     - name: Save Artifact
       uses: actions/upload-artifact@v2.3.1
       with:
