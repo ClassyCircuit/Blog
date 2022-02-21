@@ -28,7 +28,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         key: ${{ secrets.SSH_KEY }}
-        source: artifact/*
+        source: artifact/prod.tar.gz
         target: "/var/www/blog/staging/"
         rm: true
     - name: Deploy Artifact on Server
