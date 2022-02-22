@@ -24,10 +24,10 @@ jobs:
     - name: Test
       run: dotnet test -c Release --no-build --no-restore --verbosity normal
     - name: Compress
-      run: tar czvf "${{ env.build_id }.tar.gz" "${{ env.build_id }"
+      run: tar czvf "${{ env.build_id }}.tar.gz" "${{ env.build_id }}"
     - name: Upload Artifact
       uses: actions/upload-artifact@v2.3.1
       with:
         name: artifact
-        path: ${{ env.build_id }.tar.gz
+        path: ${{ env.build_id }}.tar.gz
         if-no-files-found: error
