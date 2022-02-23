@@ -18,10 +18,7 @@ namespace Blog.Web
 		{
 			var host = CreateHostBuilder(args).Build();
 
-			var file = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "log.txt");
-			var factory = new LoggerFactory();
-			factory.AddProvider(new FileLoggerProvider(file));
-			var logger = factory.CreateLogger("T");
+			var logger = GetFileLogger();
 
 			logger.LogInformation("Testing");
 			logger.LogInformation($"args: {string.Join(',', args)}");
@@ -45,6 +42,24 @@ namespace Blog.Web
 			}
 
 			host.Run();
+		}
+
+		private static ILogger GetFileLogger()
+		{
+			string filePath;
+			if (OperatingSystem.IsLinux())
+			{
+				filePath = "/var/log/blog/logs.txt";
+			}
+			else
+			{
+				filePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "logs.txt");
+			}
+
+			var factory = new LoggerFactory();
+			factory.AddProvider(new FileLoggerProvider(filePath));
+			var logger = factory.CreateLogger("FileLogger");
+			return logger;
 		}
 
 		public static IHostBuilder CreateHostBuilder(string[] args) =>
