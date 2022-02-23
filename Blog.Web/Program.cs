@@ -17,7 +17,7 @@ namespace Blog.Web
 		{
 			var host = CreateHostBuilder(args).Build();
 
-			var file = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+			var file = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "log.txt");
 			var factory = new LoggerFactory();
 			factory.AddProvider(new FileLoggerProvider(file));
 			var logger = factory.CreateLogger("T");
