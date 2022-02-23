@@ -27,6 +27,7 @@ Source code for [janiswritescode.com](janiswritescode.com)
 - [ ] About page
 - [ ] Footer contains release version
 - [ ] Articles which are being edited should auto-save from time to time
+- [ ] Access prod db with local editors
 
 ## Done
 - [x] When resizing browser - logo height must become smaller (along with img)  
