@@ -46,7 +46,12 @@ jobs:
           sudo mkdir /var/www/blog/prod 
           sudo find /var/www/blog/staging/artifact/ -name '*.tar.gz' -execdir  tar -C /var/www/blog/prod -xzf '{}' --strip-components 1 \;
           
-          # startup logging outside app dir, creates file and gives permissions
+          # give permissions to www-data user
+          sudo chown -R www-data /var/www
+          sudo find /var/www -type f -exec chmod 644 {} \; # files: read, write
+          sudo find /var/www -type d -exec chmod 755 {} \; # dirs: create,modify,delete & list
+          
+          # file logging outside app dir, creates file and gives permissions
           sudo mkdir /var/log/blog -p
           sudo touch /var/log/blog/logs.txt
           sudo chown www-data /var/log/blog/logs.txt
