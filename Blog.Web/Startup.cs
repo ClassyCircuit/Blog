@@ -69,10 +69,7 @@ namespace Blog.Web
 			}
 
 			app.UseWebOptimizer();
-
-			app.UseHttpsRedirection();
 			app.UseStaticFiles();
-
 			app.UseRouting();
 
 			app.UseEndpoints(endpoints =>
