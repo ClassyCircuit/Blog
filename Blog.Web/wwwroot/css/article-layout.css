@@ -1,10 +1,17 @@
-﻿.article-grid {
+﻿/* underline animation */
+.article-layout-grid {
   display: grid;
   grid-template-columns: minmax(1.2rem, 1fr) minmax(0, 57ch) minmax(1.2rem, 1fr);
   align-items: flex-start;
   min-height: 50vh;
 }
 
-.article {
+.article-container {
   word-break: break-word;
+  display: flex;
+  flex-flow: column wrap;
+}
+.article-container img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  align-self: center;
 }
