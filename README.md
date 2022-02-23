@@ -15,6 +15,7 @@ Source code for [janiswritescode.com](janiswritescode.com)
 - [ ] Change article visibility. Mark as draft or published  
 - [ ] navbar sticky at top  
 - [ ] Authentication
+- [ ] Code styling is missing for articles
 
 ## Backlog  
 - [ ] Reading indicator line (scroll and update how much article is left to read)  
@@ -28,6 +29,7 @@ Source code for [janiswritescode.com](janiswritescode.com)
 - [ ] Footer contains release version
 - [ ] Articles which are being edited should auto-save from time to time
 - [ ] Access prod db with local editors
+- [ ] Image caption styling is missing
 
 ## Done
 - [x] When resizing browser - logo height must become smaller (along with img)  
