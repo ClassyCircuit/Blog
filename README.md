@@ -1,4 +1,4 @@
-[![Build](https://github.com/janissimsons/Blog/actions/workflows/build.yml/badge.svg)](https://github.com/janissimsons/Blog/actions/workflows/build.yml)  
+[![Build](https://github.com/janissimsons/Blog/actions/workflows/build.yml/badge.svg)](https://github.com/janissimsons/Blog/actions/workflows/build.yml) 
 [![Deploy](https://github.com/janissimsons/Blog/actions/workflows/deploy.yml/badge.svg)](https://github.com/janissimsons/Blog/actions/workflows/deploy.yml)
 
 # [ janis writes code ] - coding blog
@@ -6,6 +6,8 @@ Source code for [janiswritescode.com](janiswritescode.com)
 
 ## Production Release v1
 - [x] Production server is setup
+- [x] CI/CD pipelines are ready
+- [x] Automatic release versioning
 - [ ] Cards content stretches entire row's height
 - [ ] Article layout fixed
 - [ ] Edit card (title, description, image) - tinymce inline editing
@@ -13,7 +15,6 @@ Source code for [janiswritescode.com](janiswritescode.com)
 - [ ] Change article visibility. Mark as draft or published  
 - [ ] navbar sticky at top  
 - [ ] Authentication
-- [ ] CI/CD pipelines are ready
 
 ## Backlog  
 - [ ] Reading indicator line (scroll and update how much article is left to read)  
@@ -23,7 +24,6 @@ Source code for [janiswritescode.com](janiswritescode.com)
 - [ ] Tags, categories
 - [ ] Automatic DB backups
 - [ ] Save all Linux configs, for disaster recovery
-- [ ] Automatic versioning (git tags)
 
 ## Done
 - [x] When resizing browser - logo height must become smaller (along with img)  
