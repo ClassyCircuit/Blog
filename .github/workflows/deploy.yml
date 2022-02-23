@@ -39,9 +39,17 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         port: ${{ secrets.PORT }}
         script: |
-          whoami
           sudo systemctl stop blog.service
+          
+          # prod dir should be cleaned and new release copied from staging/artifacts to blog/prod
           sudo rm -rf /var/www/blog/prod/
           sudo mkdir /var/www/blog/prod 
-          sudo find /var/www/blog/staging/artifact/ -name '*.tar.gz' -execdir  tar -C /var/www/blog/prod -xzf '{}' --strip-components 1 \;          
+          sudo find /var/www/blog/staging/artifact/ -name '*.tar.gz' -execdir  tar -C /var/www/blog/prod -xzf '{}' --strip-components 1 \;
+          
+          # startup logging outside app dir, creates file and gives permissions
+          sudo mkdir /var/log/blog -p
+          sudo touch /var/log/blog/logs.txt
+          sudo chown www-data /var/log/blog/logs.txt
+          sudo chmod 777 /var/log/blog/logs.txt
+          
           sudo systemctl start blog.service
