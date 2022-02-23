@@ -24,6 +24,8 @@ Source code for [janiswritescode.com](janiswritescode.com)
 - [ ] Tags, categories
 - [ ] Automatic DB backups
 - [ ] Save all Linux configs, for disaster recovery
+- [ ] About page
+- [ ] Footer contains release version
 
 ## Done
 - [x] When resizing browser - logo height must become smaller (along with img)  
