@@ -23,12 +23,6 @@ namespace Blog.Web
 			logger.LogInformation("Testing");
 			logger.LogInformation($"args: {string.Join(',', args)}");
 
-			//if (OperatingSystem.IsLinux())
-			//{
-			//	Environment.SetEnvironmentVariable("DbUser", args[0]);
-			//	Environment.SetEnvironmentVariable("DbPass", args[1]);
-			//}
-
 			var dbUser = Environment.GetEnvironmentVariable("DbUser");
 			var dbPass = Environment.GetEnvironmentVariable("DbPass");
 

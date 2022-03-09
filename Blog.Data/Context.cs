@@ -1,9 +1,10 @@
 ﻿using Blog.Business.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Blog.Data
 {
-	public class Context : DbContext
+	public class Context : IdentityDbContext
 	{
 		public Context(DbContextOptions options) : base(options)
 		{
@@ -18,7 +19,7 @@ namespace Blog.Data
 
 		protected override void OnModelCreating(ModelBuilder builder)
 		{
-
+			base.OnModelCreating(builder);
 		}
 
 		public override int SaveChanges()

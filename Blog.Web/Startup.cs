@@ -1,10 +1,13 @@
 using Blog.Business;
 using Blog.Common;
 using Blog.Data;
+using Blog.Web.Areas.Identity;
 using Blog.Web.Data;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -45,6 +48,10 @@ namespace Blog.Web
 				pipeline.CompileScssFiles();
 			});
 
+			services.AddDefaultIdentity<IdentityUser>()
+				.AddEntityFrameworkStores<Context>();
+			services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
+
 			services.AddDataLayer(cfg);
 			services.AddBusinessLayer(cfg);
 		}
@@ -72,8 +79,12 @@ namespace Blog.Web
 			app.UseStaticFiles();
 			app.UseRouting();
 
+			app.UseAuthentication();
+			app.UseAuthorization();
+
 			app.UseEndpoints(endpoints =>
 			{
+				endpoints.MapControllers();
 				endpoints.MapBlazorHub();
 				endpoints.MapFallbackToPage("/_Host");
 			});
