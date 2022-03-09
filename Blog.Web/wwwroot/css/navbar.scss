@@ -22,3 +22,14 @@
 .nav-item {
 	font-size: x-large;
 }
+
+#login-navbar {
+	float: right;
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+}
+
+#login-navbar * {
+	color: var(--color-yellow);
+}
